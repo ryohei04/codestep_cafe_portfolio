@@ -41,4 +41,13 @@ header {
     }  
 }
 
-
+main{
+  .menu {
+    height: 1000px;
+    .title {
+      height: 300px;
+      background-image: url("../img/menu.jpg");
+      background-size: cover;
+    }
+  }
+}

@@ -43,4 +43,14 @@ header h1 {
   right: 0;
   text-align: center;
 }
+
+main .menu {
+  height: 1000px;
+}
+
+main .menu .title {
+  height: 300px;
+  background-image: url("../img/menu.jpg");
+  background-size: cover;
+}
 /*# sourceMappingURL=styles.css.map */
