@@ -46,11 +46,76 @@ header h1 {
 
 main .menu {
   height: 1000px;
+  margin-top: 50px;
+  position: relative;
 }
 
 main .menu .title {
   height: 300px;
   background-image: url("../img/menu.jpg");
   background-size: cover;
+  top: 30%;
+}
+
+main .menu .title h1 {
+  text-align: center;
+  color: white;
+  font-size: 72px;
+  font-weight: bold;
+  padding: 100px;
+}
+
+main .menu .order {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 90px 0px 0px 0px;
+}
+
+main .menu .order .orderNav {
+  width: 50%;
+  padding: 0 50px;
+}
+
+main .menu .order .orderNav h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: solid 6px #E03131;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+main .menu .order .orderNav dl {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 14.4px;
+}
+
+main .menu .order .orderNav dt {
+  width: 85%;
+  margin-bottom: 30px;
+  border-bottom: dotted 1px #000000;
+  text-align: left;
+}
+
+main .menu .order .orderNav dd {
+  width: 15%;
+}
+
+main .menu .order .orderNav .other {
+  margin-top: 30px;
+}
+
+.orderNav:first-child {
+  border-right: solid 1px black;
 }
 /*# sourceMappingURL=styles.css.map */
