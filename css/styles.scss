@@ -71,6 +71,9 @@ main{
       .orderNav {
         width: 50%;
         padding: 0 50px;
+        &:first-child {
+          border-right: solid 1px black;
+        }
         h3 {
           text-align: center;
           font-size: 40px;
@@ -100,7 +103,124 @@ main{
       }
     }
   }
+
+  .about {
+    height: 1000px;
+    margin-top: 50px;
+    // position: relative;
+    .title {
+      height: 300px;
+      background-image: url("../img/about.jpg");
+      background-size: cover;
+      //position: absolute;
+      top: 30%;
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 72px;
+        font-weight: bold;
+        padding: 100px;
+      }
+    }
+
+    .aboutNav {
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 90px 16px 150px 16px;
+        h3 {
+          text-align: center;
+          font-size: 40px;
+          font-weight: bold;
+          border-bottom: solid 6px #E03131;
+          padding-bottom: 10px;
+          display: inline-block;
+        }
+        // &:first-child {
+        //   border-right: solid 1px black;
+        // }
+        ul {
+          margin-top: 50px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          li {
+            list-style: none;
+            width: 46%;
+            line-height: 2;
+            text-align: left;
+            //padding-right: 10px;
+          }
+        }
+
+        .link {
+          margin-top: 70px;
+          a {
+            text-decoration: none;
+            color: black;
+            width: 160px;
+            height: 50px;
+            display: inline-block;
+            background: red;
+            transition: all 0.3s ease;
+            line-height: 3.5;
+          }
+
+        }
+      }
+  }
+
+  .location {
+    height: 1000px;
+    margin-top: 50px;
+    position: relative;
+    .title {
+      height: 300px;
+      background-image: url("../img/location.jpg");
+      background-size: cover;
+      //position: absolute;
+      top: 30%;
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 72px;
+        font-weight: bold;
+        padding: 100px;
+      }
+    }
+    .locationNav {
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 90px 16px 150px 16px;      
+        h3 {
+          text-align: center;
+          font-size: 40px;
+          font-weight: bold;
+          border-bottom: solid 6px #E03131;
+          padding-bottom: 10px;
+          display: inline-block;
+          margin-bottom: 80px;
+        }
+        .map {
+          text-align: center;
+          filter: grayscale(1);
+          margin-bottom: 30px;
+          iframe {
+            height: 400px;
+            width: 100%;
+          }
+        }
+        .mapNavi {
+          height: 200px;
+          line-height: 2;
+          text-align: left;
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+  }
 }
-.orderNav:first-child {
-  border-right: solid 1px black;
-}
+// .orderNav:first-child {
+// }

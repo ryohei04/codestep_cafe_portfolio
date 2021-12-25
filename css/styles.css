@@ -81,6 +81,10 @@ main .menu .order .orderNav {
   padding: 0 50px;
 }
 
+main .menu .order .orderNav:first-child {
+  border-right: solid 1px black;
+}
+
 main .menu .order .orderNav h3 {
   text-align: center;
   font-size: 40px;
@@ -115,7 +119,134 @@ main .menu .order .orderNav .other {
   margin-top: 30px;
 }
 
-.orderNav:first-child {
-  border-right: solid 1px black;
+main .about {
+  height: 1000px;
+  margin-top: 50px;
+}
+
+main .about .title {
+  height: 300px;
+  background-image: url("../img/about.jpg");
+  background-size: cover;
+  top: 30%;
+}
+
+main .about .title h1 {
+  text-align: center;
+  color: white;
+  font-size: 72px;
+  font-weight: bold;
+  padding: 100px;
+}
+
+main .about .aboutNav {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 16px 150px 16px;
+}
+
+main .about .aboutNav h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: solid 6px #E03131;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+main .about .aboutNav ul {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .about .aboutNav ul li {
+  list-style: none;
+  width: 46%;
+  line-height: 2;
+  text-align: left;
+}
+
+main .about .aboutNav .link {
+  margin-top: 70px;
+}
+
+main .about .aboutNav .link a {
+  text-decoration: none;
+  color: black;
+  width: 160px;
+  height: 50px;
+  display: inline-block;
+  background: red;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 3.5;
+}
+
+main .location {
+  height: 1000px;
+  margin-top: 50px;
+  position: relative;
+}
+
+main .location .title {
+  height: 300px;
+  background-image: url("../img/location.jpg");
+  background-size: cover;
+  top: 30%;
+}
+
+main .location .title h1 {
+  text-align: center;
+  color: white;
+  font-size: 72px;
+  font-weight: bold;
+  padding: 100px;
+}
+
+main .location .locationNav {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 16px 150px 16px;
+}
+
+main .location .locationNav h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: solid 6px #E03131;
+  padding-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 80px;
+}
+
+main .location .locationNav .map {
+  text-align: center;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  margin-bottom: 30px;
+}
+
+main .location .locationNav .map iframe {
+  height: 400px;
+  width: 100%;
+}
+
+main .location .locationNav .mapNavi {
+  height: 200px;
+  line-height: 2;
+  text-align: left;
+}
+
+main .location .locationNav .mapNavi p {
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
