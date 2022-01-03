@@ -11,6 +11,10 @@ body {
   font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   height: 416px;
   color: white;
@@ -23,8 +27,8 @@ header {
     justify-content: flex-end;
     li {
       margin-left: 30px;
-
       a {
+        color: #fff;
         font-weight: bold;
       }
     }
@@ -50,9 +54,8 @@ main{
       height: 300px;
       background-image: url("../img/menu.jpg");
       background-size: cover;
-      //position: absolute;
       top: 30%;
-      h1 {
+      h2 {
         text-align: center;
         color: white;
         font-size: 72px;
@@ -61,7 +64,6 @@ main{
       }
     }
     .order {
-      // height: 900px;
       max-width: 1000px;
       display: flex;
       margin-top: 50px;
@@ -107,14 +109,12 @@ main{
   .about {
     height: 1000px;
     margin-top: 50px;
-    // position: relative;
     .title {
       height: 300px;
       background-image: url("../img/about.jpg");
       background-size: cover;
-      //position: absolute;
       top: 30%;
-      h1 {
+      h2   {
         text-align: center;
         color: white;
         font-size: 72px;
@@ -149,38 +149,100 @@ main{
             width: 46%;
             line-height: 2;
             text-align: left;
-            //padding-right: 10px;
           }
         }
 
         .link {
           margin-top: 70px;
-          a {
-            text-decoration: none;
-            color: black;
-            width: 160px;
-            height: 50px;
-            display: inline-block;
-            background: red;
+          position: relative;
+          width: 160px;
+          height: 50px;
+          line-height: 3.5;
+          display: inline-block;
+          color: #000;
+          padding: 0;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &::before,
+          &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: #e03131;
             transition: all 0.3s ease;
-            line-height: 3.5;
           }
+
+          &::before {
+            width: 2px;
+            height: 50%;
+          }
+          &::after {
+            width: 20%;
+            height: 2px;
+          }
+
+          /*
+            ホバー時の縦の動作
+            右の赤線と左の赤線の高さを100%にする
+          */
+          &:hover::before,
+          span:hover::before {
+            height: 100%;
+          }
+          /*
+          ホバー時の横の動作
+          下の赤線と上の赤線の横幅を100%にする
+          */
+          &:hover::after,
+          span:hover::after {
+            width: 100%;
+          }
+
+          span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          span::before {
+            width: 2px;
+            height: 50%;
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: #e03131;
+            transition: all 0.3s ease;
+          }
+
+          span::after {
+            width: 20%;
+            height: 2px;
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: #e03131;
+            transition: all 0.3s ease;
+          }
+
 
         }
       }
   }
 
   .location {
-    height: 1000px;
     margin-top: 50px;
     position: relative;
     .title {
       height: 300px;
       background-image: url("../img/location.jpg");
       background-size: cover;
-      //position: absolute;
       top: 30%;
-      h1 {
+      h2 {
         text-align: center;
         color: white;
         font-size: 72px;
@@ -212,7 +274,7 @@ main{
           }
         }
         .mapNavi {
-          height: 200px;
+          height: 100px;
           line-height: 2;
           text-align: left;
           p {
@@ -222,5 +284,198 @@ main{
       }
   }
 }
-// .orderNav:first-child {
-// }
+
+footer {
+  text-align: center;
+  font-size: 0.5rem;
+  padding: 10px 0;
+}
+
+
+@media screen and (max-width: 375px) {
+
+  header {
+    padding: 20px 20px;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+      img {
+        max-width: 100%;
+      }
+  }
+  main{
+    .menu {
+      height: auto;
+      .title {
+        height: 94px;
+        h2 {
+          font-size: 2rem;
+          padding: 30px;
+        }
+      }
+      .order {
+        flex-direction: column;
+        padding: 30px 0px 0px 0px;
+        .orderNav {
+          width: auto;
+          &:first-child {
+            border-right: none;
+          }
+        }
+        h3 {
+          margin-top: 0px!important;
+          margin-bottom: 25px!important;
+          font-size: 1.25rem!important;
+        }
+        dl {
+          margin-top: 0px!important;
+        }
+        dt {
+          width: 87%;
+        }
+        dd {
+          width: 13%;
+        }
+      }
+    }
+
+    .about {
+      height: auto;
+      margin-top: 20px;
+      .title {
+        height: 94px;
+        top: 20%;
+        background-attachment: scroll;
+        h2 {
+            text-align: center;
+          font-size: 2rem;
+          padding: 30px;
+        }
+      }
+  
+      .aboutNav {
+        text-align: center;
+        padding: 30px 16px 60px 32px;
+        h3 {
+          text-align: center;
+          margin-bottom: 25px;
+          font-size: 1.25rem;
+        }
+        ul {
+          margin-top: 10px;
+          flex-direction: column;
+          li {
+              list-style: none;
+              width: 100%;
+              padding-right: 0px;
+          }
+        }
+  
+        .link {
+          margin-top: 70px;
+  
+          &::before,
+          &::after {
+              position: absolute;
+              // content: "";
+              // right: 0;
+              // bottom: 0;
+              // background: #e03131;
+              // transition: all 0.3s ease;  
+          }
+          &::before {
+              width: 2px;
+              // height: 50%;
+          }
+          &::after {
+              width: 20%;
+              // height: 2px;
+          }
+            /*
+              ホバー時の縦の動作
+              右の赤線と左の赤線の高さを100%にする
+            */
+          &:hover::before,
+          span:hover::before {
+              height: 100%;
+          }
+            /*
+            ホバー時の横の動作
+            下の赤線と上の赤線の横幅を100%にする
+            */
+          &:hover::after,
+            span:hover::after {
+              width: 100%;
+          }
+  
+          span {
+            position: relative;
+              // display: block;
+              // width: 100%;
+              // height: 100%;
+          }
+  
+          span::before {
+            width: 2px;
+              // height: 50%;
+              // position: absolute;
+              // content: "";
+              // left: 0;
+              // top: 0;
+              // background: #e03131;
+              // transition: all 0.3s ease;
+          }
+  
+          span::after {
+            width: 20%;
+              // height: 2px;
+              // position: absolute;
+              // content: "";
+              // left: 0;
+              // top: 0;
+              // background: #e03131;
+              // transition: all 0.3s ease;
+          }  
+        }
+      }
+    }
+
+    .location {
+      height: auto;
+      margin-top: 20px;
+      .title {
+        height: 94px;
+        top: 30%;
+        h2 {
+          font-size: 2rem;
+          padding: 30px;
+        }
+      }
+      .locationNav {
+        padding: 30px 16px 60px 16px;   
+          h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+          }
+          .map {
+            text-align: center;
+            filter: grayscale(1);
+            margin-bottom: 30px;
+            iframe {
+              height: 400px;
+              width: 100%;
+            }
+          }
+          .mapNavi {
+            height: auto;
+            line-height: 2;
+            text-align: left;
+            p {
+              margin-bottom: 10px;
+            }
+          }
+        }
+    }
+  }
+}
